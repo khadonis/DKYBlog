@@ -1,0 +1,31 @@
+//vendor
+@import "vendor/font-awesome";
+@import "vendor/bootstrap";
+
+//utils (variables & mixins)
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/functions";
+@import "utils/placeholders";
+
+//base
+@import "base/global";
+@import "base/typography";
+
+//components
+@import "components/nav";
+@import "components/sliders";
+@import "components/buttons";
+@import "components/media";
+
+//layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+@import "layout/forms";
+
+//pages
+@import "pages/home";
+@import "pages/about";
+@import "pages/contact";
+

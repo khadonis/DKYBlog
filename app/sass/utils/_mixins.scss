@@ -1,0 +1,14 @@
+@mixin breakpoint($point) {
+    @if $point == laptop {
+      @media (max-width: 1366px) { @content; }
+    }
+    @else if $point == ipad {
+      @media (max-width: 1024px) { @content; }
+    }
+    @else if $point == ipad-v {
+      @media (max-width: 768px)  { @content; }
+    }
+    @else if $point == iphone {
+      @media (max-width: 425px)  { @content; }
+    }
+  }
