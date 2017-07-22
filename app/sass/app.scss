@@ -2,15 +2,17 @@
 @import "vendor/font-awesome";
 @import "vendor/bootstrap";
 
-//utils (variables & mixins)
-@import "utils/variables";
-@import "utils/mixins";
-@import "utils/functions";
-@import "utils/placeholders";
+//abstracts (variables, mixins...)
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/placeholders";
 
 //base
-@import "base/global";
+@import "base/base";
 @import "base/typography";
+@import "base/fonts";
+@import "base/helpers";
 
 //components
 @import "components/nav";

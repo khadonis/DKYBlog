@@ -1,3 +1,23 @@
-.social-menu{
-    @include make-sm-column(4);
+.social-menu {
+    a {
+        margin-right: 10px;
+    }
+}
+
+.menu-toggle {
+    position: absolute;
+    left: auto;
+    right: 0;
+    width: 36px;
+    height: 20px;
+    display: block;
+    margin: 15px;
+}
+
+.icon-bar {
+    width: 100%;
+    height: 3px;
+    background-color: $type-color;
+    display: block;
+    margin-bottom: 5px;
 }

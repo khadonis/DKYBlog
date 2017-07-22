@@ -1,0 +1,28 @@
+@mixin breakpoint($point) {
+    @if $point==huges {
+        @media (max-width: 1366px) {
+            @content;
+        }
+    }
+    @else if $point==larges {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $point==mediums {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $point==smalls {
+        @media (max-width: 425px) {
+            @content;
+        }
+    }
+}
+
+@mixin vertical-align($position:relative) {
+    top: 50%;
+    transform: translateY(-50%);
+    position: $position;
+}
