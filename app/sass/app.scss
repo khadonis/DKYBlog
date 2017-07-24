@@ -7,11 +7,11 @@
 @import "abstracts/mixins";
 @import "abstracts/functions";
 @import "abstracts/placeholders";
+@import "abstracts/fonts";
 
 //base
 @import "base/base";
 @import "base/typography";
-@import "base/fonts";
 @import "base/helpers";
 
 //components
@@ -19,6 +19,7 @@
 @import "components/sliders";
 @import "components/buttons";
 @import "components/media";
+@import "components/boxes";
 
 //layout
 @import "layout/header";

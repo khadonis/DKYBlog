@@ -1,0 +1,21 @@
+footer {
+    .container {
+        border-top: 1px solid $st-border-colors;
+        padding-top: $header-top;
+    }
+    .footer-logo {
+        img {
+            margin-bottom: $header-top - 30px;
+        }
+    }
+    h4 {
+        letter-spacing: 0;
+        text-indent: 0;
+    }
+    li:last-child {
+        a {
+            margin-right: 0;
+        }
+    }
+   padding-bottom: 50px;
+}

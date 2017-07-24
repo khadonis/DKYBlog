@@ -1,8 +1,13 @@
+body{
+    font-family: $font-normal;
+    font-size: 12px;
+}
 a {
     color: $type-color;
     transition: color ease .3s;
     &:hover,&:active,&:focus {
         color: $main-color;
+        text-decoration: none;
     }
 }
 
@@ -13,4 +18,8 @@ ul {
 
 li {
     display: inline;
+}
+p{
+    font-family: $font-thin;
+    font-size: 10px;
 }

@@ -1,4 +1,8 @@
-header{
+header {
     padding-top: $header-top;
     color: $type-color;
+    .header-top {
+        border-bottom: 1px solid $st-border-colors;
+        padding-bottom: $header-top - 15px;
+    }
 }

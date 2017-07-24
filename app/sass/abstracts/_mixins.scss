@@ -26,3 +26,21 @@
     transform: translateY(-50%);
     position: $position;
 }
+
+@mixin text-align($direct) {
+    @if($direct=left) {
+        .text-#{$direct} {
+            text-align: $direct;
+        }
+    }
+    @else if($direct=center) {
+        .text-#{$direct} {
+            text-align: $direct;
+        }
+    }
+    @else if($direct=right) {
+        .text-#{$direct} {
+            text-align: $direct;
+        }
+    }
+}

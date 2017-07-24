@@ -1,24 +1,73 @@
-h1{
+h1 {
     font-size: $h1-size;
 }
-h2{
+
+h2 {
     font-size: $h2-size;
+    font-family: $font-bold;
+    font-weight: bold;
+    text-align: center;
 }
-h3{
+
+h3 {
     font-size: $h3-size;
+    line-height: 0.938;
+    text-align: center;
+    letter-spacing: 7px;
 }
-h4{
+
+h4 {
+    letter-spacing: 7px;
     font-size: $h4-size;
+    line-height: 1.071;
+    text-align: center;
 }
-h5{
+
+h5 {
+    letter-spacing: 7px;
     font-size: $h5-size;
+    color: $h5-color;
+    line-height: 1.25;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+    text-indent: 7px;
 }
-h6{
+
+h6 {
     font-size: $h6-size;
+    letter-spacing: 2px;
+    text-indent: 2px;
+    font-family: $font-thin;
+    color: lighten($h5-color, 20%);
+    line-height: 1.364;
+    text-align: center;
+    margin: 0;
+    .s-box & {
+        color: lighten($h5-color, 5%);
+        font-family: $font-normal;
+        letter-spacing:  4px;
+        text-indent: 4px;
+    }
 }
-p,span{
+
+p,
+span {
     font-size: $p-size;
+    text-indent: 2px;
+    font-family: $font-normal;
+    letter-spacing: 2px;
 }
-.fa{
-    font-size: $h4-size;
+
+.fa {
+    font-size: $fa-size;
+    footer & {
+        font-size: $h2-size;
+    }
+}
+
+.imza {
+    font-family: $font-buttercup;
+    font-size: $imza-size;
+    margin-bottom: 20px;
 }
