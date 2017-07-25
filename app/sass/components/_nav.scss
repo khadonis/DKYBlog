@@ -17,7 +17,33 @@
 }
 
 .sub-menu {
+    .nav-menu & {
+        li {
+            &:last-child {
+                a {
+                    border-bottom: none;
+                }
+            }
+        }
+        a {
+            &:after {
+                display: none;
+            }
+            margin: 0;
+            border-bottom: 1px solid $st-border-colors;
+            padding: 10px 0;
+        }
+        padding-bottom: 0;
+        display: none;
+        margin-bottom: 0;
+        @include breakpoint(mediums) {
+            display: block;
+        }
+    }
     text-align: center;
+    @include breakpoint(mediums) {
+        display: none;
+    }
     li:last-child {
         a:after {
             display: none;
@@ -39,6 +65,65 @@
             width: 1px;
             display: block;
             background-color: $st-border-colors;
+        }
+    }
+}
+
+.nav-menu {
+    width: 320px;
+    height: 100vh;
+    position: fixed;
+    right: -320px;
+    top: 0;
+    transition: all ease .3s;
+    &.active{
+        right: 0;
+    }
+    bottom: 0;
+    padding: $header-top 0 0;
+    background: #fff;
+    overflow-y: auto;
+    z-index: $z-index-nav-menu;
+    .logo {
+        text-align: center;
+    }
+    .yasam-menu {
+        a {
+            font-size: $h3-size;
+            display: block;
+            border-bottom: 1px dashed $st-border-colors;
+            padding: 10px 0;
+        }
+        i {
+            background: $h5-color;
+            color: #fff;
+            padding: 7px;
+            border-radius: 60px;
+            line-height: 0.9;
+            font-size: 13px;
+        }
+    }
+    ul {
+        padding: 15px 30px;
+    }
+    li {
+        display: block;
+    }
+    .menu-bottom {
+        li:last-child {
+            a {
+                border-bottom: 1px solid $st-border-colors;
+            }
+        }
+        a {
+            padding: 5px 0;
+            display: block;
+            border-top: 1px solid $st-border-colors;
+        }
+        position: absolute;
+        bottom: 1px;
+        @include breakpoint(mediums) {
+            position: relative;
         }
     }
 }

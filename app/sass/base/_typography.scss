@@ -14,6 +14,12 @@ h3 {
     line-height: 0.938;
     text-align: center;
     letter-spacing: 7px;
+    .yasam-menu & {
+        display: inline;
+        letter-spacing: normal;
+        text-indent: 0;
+        padding-left: 15px;
+    }
 }
 
 h4 {
@@ -32,6 +38,11 @@ h5 {
     text-transform: uppercase;
     margin: 10px 0;
     text-indent: 7px;
+    .menu-bottom & {
+        letter-spacing: 6px;
+        text-indent: 6px;
+        color: $type-color;
+    }
 }
 
 h6 {
