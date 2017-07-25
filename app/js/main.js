@@ -42,8 +42,6 @@ slideBtnNextAct(1);
 
 var mainSwiper = new Swiper('.main-swiper-container', {
     slidesPerView: 'auto',
-   // loopedSlides: 1,
-    //loop: true,
     centeredSlides: true,
     nextButton: '.main-swiper-button-next',
     prevButton: '.main-swiper-button-prev',
