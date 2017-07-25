@@ -1,0 +1,12 @@
+%trans {
+    transition: all ease .3s;
+}
+
+%ucgen {
+    border: {
+        top: 3px solid $h5-color;
+        right: 3px solid $h5-color;
+        left: 0;
+        bottom: 0;
+    }
+}

@@ -2,10 +2,182 @@
     height: 500px;
     margin-bottom: 75px;
     background-color: $h5-color;
+    overflow: hidden;
+    margin: 0 auto 75px;
 }
 
 .bottom-slider {
     height: 235px;
     margin-bottom: 75px;
     background-color: $h5-color;
+}
+
+.main-swiper {
+    &-container {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        .swiper-slide {
+            width: 33.3333%;
+            &.swiper-slide-active {
+                .txt-wr {
+                    opacity: 1;
+                }
+            }
+            .txt-wr {
+                position: absolute;
+                @extend %trans;
+                top: auto;
+                bottom: 0;
+                width: 100%;
+                padding: 40px;
+                opacity: 0;
+                color: #ffffff; //background: linear-gradient(to top, rgba(#000, .3) 0%, rgba(#000,.0) 50%); 
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.99) 99%, rgba(0, 0, 0, 1) 100%);
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(#000, .6);
+                display: block;
+                z-index: $z-index-slider-mask;
+                transition: all ease .3s;
+                opacity: 1;
+            }
+            &-active:after {
+                opacity: 0;
+            }
+            img {
+                height: 500px;
+            }
+        }
+    }
+    &-button-next,
+    &-button-prev {
+        background-color: rgba(#000, .4);
+        display: block;
+        @include vertical-align(absolute);
+        height: 96px; //width: 60px;
+        z-index: $z-index-slider-button;
+    }
+    &-button-next {
+        right: 0;
+        .nb-img {
+            min-width: 150px;
+            height: 96px;
+            position: relative;
+            float: left;
+            left: 0;
+            display: block;
+            top: 0;
+            background: {
+                position: center center;
+                repeat: no-repeat;
+                size: cover;
+            }
+        }
+        .nb-txt {
+            float: left;
+            font-size: 18px;
+            color: #fff;
+            line-height: 2;
+            padding: 30px;
+        }
+    }
+    &-button-prev {
+        left: 0;
+    }
+}
+
+.nb-arrows {
+    width: 56px;
+    height: 36px;
+    display: block;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-40%);
+    &:after {
+        content: '';
+        display: block;
+        border: {
+            top: 1px solid #fff;
+            right: 1px solid #fff;
+            left: 0;
+            bottom: 0;
+        } //left: 50%;
+        position: absolute;
+        width: 28px;
+        height: 28px;
+    }
+    .main-swiper-button-prev & {
+        &:after {
+            left: 7px;
+            transform: rotate(225deg);
+        }
+    }
+    .main-swiper-button-next & {
+        &:after {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.news-carousel {
+    overflow: hidden;
+    width: 100%;
+    height: 340px;
+    @extend %trans;
+    position: relative;
+}
+
+.news-swiper-container {
+    width: 100%;
+    height: 340px;
+    .swiper-slide {
+        text-align: center;
+    }
+    .news-swiper-button-next,
+    .news-swiper-button-prev {
+        width: 20px;
+        height: 25px;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        transform: translateY(-50%);
+        z-index: $z-index-slider-button;
+        .tri {
+            width: 10px;
+            height: 10px;
+            left: 0;
+            @extend %ucgen;
+            border-color: $h5-color;
+            transform: rotate(-45deg);
+            position: absolute;
+        }
+        .bullet {
+            background-color: $h5-color;
+            width: 4px;
+            height: 4px;
+            display: block;
+            position: relative;
+            margin-top: 3px;
+            left: 3px;
+            top: 5px;
+        }
+    }
+    .news-swiper-button-next{
+        top: 40%;
+    }
+    .news-swiper-button-prev{
+        top: 60%;
+        transform: translateY(-50%) rotate(180deg);
+        right: 10px;
+
+    }
 }

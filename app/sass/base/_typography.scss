@@ -7,6 +7,10 @@ h2 {
     font-family: $font-bold;
     font-weight: bold;
     text-align: center;
+    .txt-wr &{
+        text-align: left;
+        font-size: 30px;
+    }
 }
 
 h3 {
@@ -14,6 +18,12 @@ h3 {
     line-height: 0.938;
     text-align: center;
     letter-spacing: 7px;
+    .txt-wr &{
+        text-align: left;
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-indent: 2px;
+    }
     .yasam-menu & {
         display: inline;
         letter-spacing: normal;
