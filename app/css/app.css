@@ -3921,6 +3921,10 @@ h2 {
   .txt-wr h2 {
     text-align: left;
     font-size: 30px; }
+    @media (max-width: 425px) {
+      .txt-wr h2 {
+        font-size: 18px;
+        margin: 8px 0; } }
 
 h3 {
   font-size: 16px;
@@ -3932,17 +3936,27 @@ h3 {
     font-size: 20px;
     letter-spacing: 2px;
     text-indent: 2px; }
+    @media (max-width: 425px) {
+      .txt-wr h3 {
+        font-size: 14px;
+        margin: 8px 0; } }
   .yasam-menu h3 {
     display: inline;
     letter-spacing: normal;
     text-indent: 0;
     padding-left: 15px; }
+  @media (max-width: 768px) {
+    .side-bar h3 {
+      line-height: 1.25; } }
 
 h4 {
   letter-spacing: 7px;
   font-size: 14px;
   line-height: 1.071;
   text-align: center; }
+  @media (max-width: 768px) {
+    .side-bar h4 {
+      line-height: 1.25; } }
 
 h5 {
   letter-spacing: 7px;
@@ -4068,7 +4082,9 @@ footer .social-menu a {
   overflow-y: auto;
   z-index: 999; }
   .nav-menu.active {
-    right: 0; }
+    right: 0;
+    -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5); }
   .nav-menu .logo {
     text-align: center; }
   .nav-menu .yasam-menu a {
@@ -4099,6 +4115,9 @@ footer .social-menu a {
     @media (max-width: 768px) {
       .nav-menu .menu-bottom {
         position: relative; } }
+  @media (max-width: 425px) {
+    .nav-menu {
+      width: 270px; } }
 
 .slider {
   height: 500px;
@@ -4106,6 +4125,9 @@ footer .social-menu a {
   background-color: #262626;
   overflow: hidden;
   margin: 0 auto 75px; }
+  @media (max-width: 425px) {
+    .slider {
+      height: 250px; } }
 
 .bottom-slider {
   height: 235px;
@@ -4116,6 +4138,9 @@ footer .social-menu a {
   width: 100%;
   height: 500px;
   position: relative; }
+  @media (max-width: 425px) {
+    .main-swiper-container {
+      height: 250px; } }
   .main-swiper-container .swiper-slide {
     width: auto; }
     .main-swiper-container .swiper-slide.swiper-slide-active .txt-wr {
@@ -4130,6 +4155,9 @@ footer .social-menu a {
       color: #ffffff;
       background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(99%, rgba(0, 0, 0, 0.99)), to(black));
       background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.99) 99%, black 100%); }
+      @media (max-width: 425px) {
+        .main-swiper-container .swiper-slide .txt-wr {
+          padding: 15px; } }
     .main-swiper-container .swiper-slide:after {
       content: '';
       position: absolute;
@@ -4143,10 +4171,16 @@ footer .social-menu a {
       -webkit-transition: all ease .3s;
       transition: all ease .3s;
       opacity: 1; }
+      @media (max-width: 768px) {
+        .main-swiper-container .swiper-slide:after {
+          background-color: rgba(0, 0, 0, 0.6); } }
     .main-swiper-container .swiper-slide-active:after {
       opacity: 0; }
     .main-swiper-container .swiper-slide img {
       height: 500px; }
+      @media (max-width: 425px) {
+        .main-swiper-container .swiper-slide img {
+          height: 250px; } }
 
 .main-swiper-button-next, .main-swiper-button-prev {
   background-color: rgba(0, 0, 0, 0.4);
@@ -4158,6 +4192,9 @@ footer .social-menu a {
   position: absolute;
   height: 96px;
   z-index: 3; }
+  @media (max-width: 768px) {
+    .main-swiper-button-next, .main-swiper-button-prev {
+      background-color: transparent; } }
   .main-swiper-button-next.swiper-button-disabled, .main-swiper-button-prev.swiper-button-disabled {
     display: none; }
 
@@ -4174,12 +4211,18 @@ footer .social-menu a {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; }
+    @media (max-width: 768px) {
+      .main-swiper-button-next .nb-img {
+        display: none; } }
   .main-swiper-button-next .nb-txt {
     float: left;
     font-size: 18px;
     color: #fff;
     line-height: 2;
     padding: 30px; }
+    @media (max-width: 768px) {
+      .main-swiper-button-next .nb-txt {
+        display: none; } }
 
 .main-swiper-button-prev {
   left: 0; }
@@ -4205,7 +4248,7 @@ footer .social-menu a {
     width: 28px;
     height: 28px; }
   .main-swiper-button-prev .nb-arrows:after {
-    left: 7px;
+    left: 12px;
     -webkit-transform: rotate(225deg);
             transform: rotate(225deg); }
   .main-swiper-button-next .nb-arrows:after {
@@ -4226,9 +4269,9 @@ footer .social-menu a {
   .news-swiper-container .news-swiper-button-next,
   .news-swiper-container .news-swiper-button-prev {
     width: 20px;
-    height: 25px;
+    height: 35px;
     position: absolute;
-    right: 0;
+    right: 0px;
     cursor: pointer;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -4237,7 +4280,8 @@ footer .social-menu a {
     .news-swiper-container .news-swiper-button-prev .tri {
       width: 10px;
       height: 10px;
-      left: 0;
+      left: 5px;
+      top: 5px;
       border-color: #807f7f;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg);
@@ -4250,15 +4294,27 @@ footer .social-menu a {
       display: block;
       position: relative;
       margin-top: 3px;
-      left: 3px;
-      top: 5px; }
+      left: 8px;
+      top: 10px; }
+    @media (max-width: 1024px) {
+      .news-swiper-container .news-swiper-button-next,
+      .news-swiper-container .news-swiper-button-prev {
+        background-color: rgba(0, 0, 0, 0.3);
+        right: 10px;
+        -webkit-box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.3);
+                box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.3); }
+        .news-swiper-container .news-swiper-button-next .tri,
+        .news-swiper-container .news-swiper-button-prev .tri {
+          border-color: #fff; }
+        .news-swiper-container .news-swiper-button-next .bullet,
+        .news-swiper-container .news-swiper-button-prev .bullet {
+          background-color: #fff; } }
   .news-swiper-container .news-swiper-button-next {
     top: 40%; }
   .news-swiper-container .news-swiper-button-prev {
     top: 60%;
     -webkit-transform: translateY(-50%) rotate(180deg);
-            transform: translateY(-50%) rotate(180deg);
-    right: 10px; }
+            transform: translateY(-50%) rotate(180deg); }
 
 .btn-search {
   position: absolute;
@@ -4406,6 +4462,10 @@ footer {
 .side-bar {
   padding-left: 50px;
   padding-right: 0; }
+  @media (max-width: 768px) {
+    .side-bar {
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .search-box {
   width: 100%;

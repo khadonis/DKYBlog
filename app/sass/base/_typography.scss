@@ -10,6 +10,10 @@ h2 {
     .txt-wr &{
         text-align: left;
         font-size: 30px;
+        @include breakpoint(smalls){
+            font-size: 18px;
+            margin: 8px 0;
+        }
     }
 }
 
@@ -23,12 +27,21 @@ h3 {
         font-size: 20px;
         letter-spacing: 2px;
         text-indent: 2px;
+        @include breakpoint(smalls){
+            font-size: 14px;
+            margin: 8px 0;
+        }
     }
     .yasam-menu & {
         display: inline;
         letter-spacing: normal;
         text-indent: 0;
         padding-left: 15px;
+    }
+    .side-bar & {
+        @include breakpoint(mediums) {
+            line-height: 1.25;
+        }
     }
 }
 
@@ -37,6 +50,11 @@ h4 {
     font-size: $h4-size;
     line-height: 1.071;
     text-align: center;
+    .side-bar & {
+        @include breakpoint(mediums) {
+            line-height: 1.25;
+        }
+    }
 }
 
 h5 {

@@ -63,6 +63,10 @@ var mainSwiper = new Swiper('.main-swiper-container', {
         } else {
             slideBtnTxt.css('padding', '30px');
         }
+    },
+    breakpoint: {
+        slidesPerView: 1
+        //centeredSlides: false
     }
 
 });

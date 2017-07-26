@@ -76,8 +76,9 @@
     right: -320px;
     top: 0;
     transition: all ease .3s;
-    &.active{
+    &.active {
         right: 0;
+        box-shadow: 0 0 20px 1px rgba(#000, .5);
     }
     bottom: 0;
     padding: $header-top 0 0;
@@ -125,5 +126,8 @@
         @include breakpoint(mediums) {
             position: relative;
         }
+    }
+    @include breakpoint(smalls) {
+        width: 270px;
     }
 }

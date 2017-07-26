@@ -1,5 +1,8 @@
 .slider {
     height: 500px;
+    @include breakpoint(smalls){
+        height: 250px;
+    }
     margin-bottom: 75px;
     background-color: darken($h5-color, 35%);
     overflow: hidden;
@@ -17,6 +20,9 @@
         width: 100%;
         height: 500px;
         position: relative;
+        @include breakpoint(smalls){
+            height: 250px;
+        }
         .swiper-slide {
             width: auto;
             &.swiper-slide-active {
@@ -34,6 +40,9 @@
                 opacity: 0;
                 color: #ffffff; //background: linear-gradient(to top, rgba(#000, .3) 0%, rgba(#000,.0) 50%); 
                 background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.99) 99%, rgba(0, 0, 0, 1) 100%);
+                @include breakpoint(smalls) {
+                    padding: 15px;
+                }
             }
             &:after {
                 content: '';
@@ -43,6 +52,9 @@
                 width: 100%;
                 height: 100%;
                 background-color: rgba(#000, .8);
+                @include breakpoint(mediums){
+                    background-color: rgba(#000, .6);
+                }
                 display: block;
                 z-index: $z-index-slider-mask;
                 transition: all ease .3s;
@@ -53,19 +65,25 @@
             }
             img {
                 height: 500px;
+                @include breakpoint(smalls){
+                    height: 250px;
+                }
             }
         }
     }
     &-button-next,
     &-button-prev {
         background-color: rgba(#000, .4);
+        @include breakpoint(mediums){
+            background-color: rgba(#000, .0);
+        }
         cursor: pointer;
         display: block;
         @include vertical-align(absolute);
         height: 96px; //width: 60px;
         z-index: $z-index-slider-button;
-        &.swiper-button-disabled{
-            display:none;
+        &.swiper-button-disabled {
+            display: none;
         }
     }
     &-button-next {
@@ -83,6 +101,9 @@
                 repeat: no-repeat;
                 size: cover;
             }
+            @include breakpoint(mediums){
+                display:none;
+            }
         }
         .nb-txt {
             float: left;
@@ -90,6 +111,9 @@
             color: #fff;
             line-height: 2;
             padding: 30px;
+            @include breakpoint(mediums){
+                display:none;
+            }
         }
     }
     &-button-prev {
@@ -121,7 +145,7 @@
     }
     .main-swiper-button-prev & {
         &:after {
-            left: 7px;
+            left: 12px;
             transform: rotate(225deg);
         }
     }
@@ -149,16 +173,17 @@
     .news-swiper-button-next,
     .news-swiper-button-prev {
         width: 20px;
-        height: 25px;
+        height: 35px;
         position: absolute;
-        right: 0;
+        right: 0px; //background-color: #000;
         cursor: pointer;
         transform: translateY(-50%);
         z-index: $z-index-slider-button;
         .tri {
             width: 10px;
             height: 10px;
-            left: 0;
+            left: 5px;
+            top: 5px;
             @extend %ucgen;
             border-color: $h5-color;
             transform: rotate(-45deg);
@@ -171,17 +196,27 @@
             display: block;
             position: relative;
             margin-top: 3px;
-            left: 3px;
-            top: 5px;
+            left: 8px;
+            top: 10px;
+        }
+        @include breakpoint(larges) {
+            background-color: rgba(#000, .3); //linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.99) 99%, rgba(0, 0, 0, 1) 100%);
+            right: 10px;
+            box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.3);
+            
+            .tri {
+                border-color: #fff;
+            }
+            .bullet {
+                background-color: #fff;
+            }
         }
     }
-    .news-swiper-button-next{
+    .news-swiper-button-next {
         top: 40%;
     }
-    .news-swiper-button-prev{
+    .news-swiper-button-prev {
         top: 60%;
         transform: translateY(-50%) rotate(180deg);
-        right: 10px;
-
     }
 }

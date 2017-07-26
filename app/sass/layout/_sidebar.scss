@@ -1,4 +1,9 @@
 .side-bar {
     padding-left: 50px;
     padding-right: 0;
+    @include breakpoint(mediums){
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
 }
