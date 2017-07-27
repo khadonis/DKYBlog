@@ -25,6 +25,10 @@
         font-family: $font-thin;
         padding: 10px 18px;
         display: inline-block;
+        transition-property: all;
+        &:hover{
+            background-color: $type-color;
+        }
     }
     &-close {
         transition: all ease .3s;
@@ -40,7 +44,7 @@
             text-align: center;
             line-height: 0.9;
             border-radius: 60px;
-            &:hover{
+            &:hover {
                 background-color: $main-color;
             }
         }
@@ -69,4 +73,38 @@
     background-color: $type-color;
     display: block;
     margin-bottom: 3px;
+}
+
+.txt-wr {
+    a {
+        text-align: center;
+        color: #fff;
+        position: relative;
+        display: block;
+        float: right;
+        z-index: $z-index-slider-button;
+        font-size: 14px;
+        &:after,
+        &:before {
+            content: '';
+            top: 0;
+            width: 12px;
+            height: 25px;
+            @include vertical-align(absolute);
+            display: block;
+            border: {
+                color: #fff;
+                width: 1px;
+                style: solid;
+            }
+        }
+        &:after {
+            right: -10px;
+            border-left: none;
+        }
+        &:before {
+            left: -10px;
+            border-right: none;
+        }
+    }
 }

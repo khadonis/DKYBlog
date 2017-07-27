@@ -1,5 +1,15 @@
 .box {
     &-item {
+        article &.social-menu {
+            border: {
+                top: 1px solid $st-border-colors;
+                bottom: 1px solid $st-border-colors;
+                left: none;
+                right: none;
+            }
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
         border: {
             left: 1px solid $st-border-colors;
             right: 1px solid $st-border-colors;
@@ -55,7 +65,7 @@
             display: list-item;
             padding-left: 30px;
         }
-        i{
+        i {
             position: absolute;
             top: 0;
             left: 0;
@@ -65,7 +75,7 @@
             font-size: 10px;
             padding-top: 3px;
         }
-        a{
+        a {
             display: block;
             padding-bottom: 10px;
         }

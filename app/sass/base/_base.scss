@@ -23,3 +23,18 @@ p{
     font-family: $font-thin;
     font-size: 10px;
 }
+article{
+    img{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    margin-bottom: 90px;
+}
+blockquote{
+    font-family: $font-bold;
+    font-size: 20px;
+    margin: 20px 0;
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-indent: 1.5px;
+}
