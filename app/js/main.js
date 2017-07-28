@@ -28,7 +28,7 @@ menuClose.click(function () {
 });
 
 //sliders
-var slideThumb = $('.nb-img'), slideTitle = $('.ng-txt'), mainSlide = $('.main-swiper-container .swiper-slide'), slideBtnTxt = $('.nb-txt'), indexX, slideImg, slideImgtitle;
+var slideThumb = $('.nb-img'), slideThumbPrev = $('.main-swiper-button-prev .nb-img'), slideTitle = $('.nb-txt'), mainSlide = $('.main-swiper-container .swiper-slide'), slideBtnTxt = $('.nb-txt'), slidePrevBtnTxt = $('.main-swiper-button-prev .nb-txt'), indexX, slideImg, slideImgtitle;
 
 
 
@@ -40,7 +40,16 @@ function slideBtnNextAct(index) {
         slideBtnTxt.empty().text(slideImgtitle);
     }
 }
+function slideBtnPrevAct(index) {
+    //if (index < mainSlide.length) {
+        slideImg = mainSlide.eq(index).find('img').attr('src');
+        slideImgtitle = mainSlide.eq(index).find('img').attr('alt');
+        slideThumbPrev.css('background-image', 'url(' + slideImg + ')');
+        slidePrevBtnTxt.empty().text(slideImgtitle);
+   // }
+}
 slideBtnNextAct(1);
+//slideBtnPrevAct(3);
 
 
 var mainSwiper = new Swiper('.main-swiper-container', {
@@ -53,7 +62,9 @@ var mainSwiper = new Swiper('.main-swiper-container', {
 
     onSlideChangeStart: function () {
         indexX = mainSwiper.realIndex + 1;
+        index2 = indexX - 2;
         slideBtnNextAct(indexX);
+        slideBtnPrevAct(index2);
         if (slideImg == '' || slideImg == undefined) {
             slideThumb.width(0);
             slideThumb.css('min-width', '0');
@@ -90,9 +101,7 @@ var newsSwiper = new Swiper('.news-swiper-container', {
 var sayfaLinki = window.location.href;
 
 
-var instagramRef;
-var instagramLink;
-var youtubeLink;
+var instagramRef, instagramLink, youtubeLink, instagramBlogLink, youtubeBlogLink;
 $('.box-item.social-menu').each(function () {
     var facebookLink = 'http://www.facebook.com/sharer.php?u=' + sayfaLinki;
     var twitterLink = 'https://twitter.com/share?url=' + sayfaLinki;
@@ -105,21 +114,21 @@ $('.box-item.social-menu').each(function () {
     }
     instagramRef = instagramRef.replace(/\s/g, '_');
     instagramRef = instagramRef.replace(/\W+/g, '');
+    instagramLink = 'https://www.instagram.com/dkyinsaat/?ref=' + instagramRef;
+    youtubeLink = 'https://www.youtube.com/dkyinsaat/?ref=' + instagramRef;
 
 
     $(this).find('.fa-facebook').parent().attr('href', facebookLink);
     $(this).find('.fa-twitter').parent().attr('href', twitterLink);
     $(this).find('.fa-google-plus').parent().attr('href', googleLink);
-    if ($(this).parent('article')) {
-        instagramLink = 'https://www.instagram.com/dkyinsaat/?ref=' + sayfaLinki;
-        youtubeLink = 'https://www.youtube.com/dkyinsaat/?ref=' + sayfaLinki;
-    }
-    if ($(this).parent('.box')) {
-        instagramLink = 'https://www.instagram.com/dkyinsaat/?ref=' + instagramRef;
-        youtubeLink = 'https://www.youtube.com/dkyinsaat/?ref=' + instagramRef;
-    }
     $(this).find('.fa-instagram').parent().attr('href', instagramLink);
     $(this).find('.fa-youtube').parent().attr('href', youtubeLink);
+});
+$('.blog-single .box-item.social-menu').each(function () {
+    instagramBlogLink = 'https://www.instagram.com/dkyinsaat/?ref=' + sayfaLinki;
+    youtubeBlogLink = 'https://www.youtube.com/dkyinsaat/?ref=' + sayfaLinki;
+    $(this).find('.fa-instagram').parent().attr('href', instagramBlogLink);
+    $(this).find('.fa-youtube').parent().attr('href', youtubeBlogLink);
 });
 
 

@@ -29,6 +29,11 @@
         &:hover{
             background-color: $type-color;
         }
+        .category-box & {
+            text-transform: capitalize;
+            padding:15px 18px;
+            margin-top: 10px;
+        }
     }
     &-close {
         transition: all ease .3s;
