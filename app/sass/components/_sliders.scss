@@ -3,16 +3,35 @@
     @include breakpoint(smalls) {
         height: 250px;
     }
-    margin-bottom: 75px;
+    margin-bottom: $heros-margin-bottom;
     background-color: darken($h5-color, 35%);
     overflow: hidden;
-    margin: 0 auto 75px;
+    margin: 0 auto $heros-margin-bottom;
 }
 
 .bottom-slider {
     height: 235px;
-    margin-bottom: 75px;
+    margin-bottom: $heros-margin-bottom;
     background-color: $h5-color;
+    overflow: hidden;
+    #instafeed {
+        div {
+            float: left;
+            display: flex;
+            flex: 1;
+            width: 12.5%;
+            &:last-child {
+                img {
+                    border: none;
+                }
+            }
+        }
+    }
+    img {
+        float: left;
+        width: 100%;
+        border-right: 1px solid $st-border-colors;
+    }
 }
 
 .main-swiper,
@@ -186,20 +205,20 @@
 
 .blog-swiper {
     &-container {
-        h2{
-            color:transparent;
+        h2 {
+            color: transparent;
             margin: 0;
             background: {
                 image: url('../images/dekorasyon.png');
                 repeat: no-repeat;
-                position:center center;
+                position: center center;
             }
             width: 100%;
             height: 100%;
             line-height: 0;
             @include vertical-align(absolute);
             z-index: $z-index-slider-button;
-            @include breakpoint(smalls){
+            @include breakpoint(smalls) {
                 background-size: 46%;
             }
         }
@@ -215,7 +234,7 @@
             width: 74px;
             height: 74px;
             background-size: contain;
-            @include breakpoint(smalls){
+            @include breakpoint(smalls) {
                 width: 44px;
                 height: 44px;
             }

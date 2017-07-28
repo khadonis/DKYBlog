@@ -54,6 +54,32 @@
             }
         }
     }
+    &-prev-blog{
+        float: right;
+        display: block;
+        color: $main-color;
+        font-size: 14px;
+        &:hover{
+            color: $type-color;
+            span{
+                color: $main-color;
+            }
+        }
+        span{
+            transition: color ease .3s;
+            padding-left: 10px;
+            font-size: 14px;
+            letter-spacing: -3px;
+            text-indent: -3px;
+            line-height: 0;
+            position: relative;
+            top: -1px;
+            color: $type-color;
+            transform: scale(1,2.5);
+            display: inline-block;
+        }
+        margin-bottom: 60px;
+    }
 }
 
 .menu-toggle {

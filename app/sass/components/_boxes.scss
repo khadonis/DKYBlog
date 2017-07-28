@@ -64,6 +64,11 @@
     }
     .kose-img-wr {
         margin-bottom: 20px;
+        .kose & {
+            img {
+                width: 150px;
+            }
+        }
     }
     p {
         margin-bottom: 30px;
@@ -90,5 +95,8 @@
             display: block;
             padding-bottom: 10px;
         }
+    }
+    .kose &{
+        margin-bottom: 0;
     }
 }

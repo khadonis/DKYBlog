@@ -1,0 +1,15 @@
+.diger{
+    img{
+        width: 100%;
+    }
+    margin-bottom: $heros-margin-bottom;
+    position: relative;
+    padding-bottom: $heros-margin-bottom;
+    &:after{
+        @extend %deg-sep;
+        width: 33%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+}

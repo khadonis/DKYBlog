@@ -9,7 +9,7 @@ h1 {
         position: relative;
         font-family: $font-normal;
         padding: 15px 110px;
-        @include breakpoint(smalls){
+        @include breakpoint(smalls) {
             padding: 15px 60px;
         }
         display: inline-block;
@@ -28,6 +28,9 @@ h1 {
         &:after {
             bottom: 0;
         }
+    }
+    .kose & {
+        margin-bottom: 0;
     }
 }
 
@@ -50,6 +53,21 @@ h2 {
     }
     .category-box & {
         margin-top: 5px;
+    }
+    .diger & {
+        font-size: 18px;
+        font-family: $font-normal;
+        letter-spacing: 12px;
+        display: inline-block;
+        text-indent: 12px;
+        padding: 0 0 15px 60px;
+        margin-bottom: 60px;
+        position: relative;
+        @include clearfix;
+        &:after {
+            @extend %deg-sep;
+            bottom: 0;
+        }
     }
 }
 
@@ -99,6 +117,15 @@ h4 {
             line-height: 1.25;
         }
     }
+    .diger & {
+        font-size: 14px;
+        font-family: $font-bold;
+        letter-spacing: normal;
+        text-indent: 0;
+        text-align: left;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
 }
 
 h5 {
@@ -124,6 +151,9 @@ h5 {
         text-indent: 6px;
         color: $type-color;
     }
+    a:hover & {
+        color: $main-color;
+    }
     .category-box & {
         font-family: $font-bold;
         color: $main-color;
@@ -144,11 +174,29 @@ h6 {
         font-size: 14px;
         margin-bottom: 50px;
     }
+    .kose & {
+        font-size: 14px;
+        color: $altin;
+        text-align: left;
+        margin-bottom: 55px;
+    }
     .s-box & {
         color: lighten($h5-color, 5%);
         font-family: $font-normal;
         letter-spacing: 4px;
         text-indent: 4px;
+        text-align: center;
+    }
+    .kose .s-box & {
+        text-align: center;
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+    .diger & {
+        text-align: left;
+        color: $type-color;
+        letter-spacing: normal;
+        text-indent: 0;
     }
 }
 
@@ -180,4 +228,7 @@ p {
     font-family: $font-buttercup;
     font-size: $imza-size;
     margin-bottom: 20px;
+    .kose .s-box & {
+        margin-bottom: 5px;
+    }
 }
