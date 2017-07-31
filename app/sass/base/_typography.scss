@@ -197,6 +197,9 @@ h6 {
         color: $type-color;
         letter-spacing: normal;
         text-indent: 0;
+        @include breakpoint(smalls) {
+            margin-bottom: 15px;
+        }
     }
 }
 

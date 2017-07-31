@@ -4105,6 +4105,9 @@ h6 {
     color: #3a3a3a;
     letter-spacing: normal;
     text-indent: 0; }
+    @media (max-width: 425px) {
+      .diger h6 {
+        margin-bottom: 15px; } }
 
 p,
 span {
@@ -4761,6 +4764,9 @@ footer .social-menu a {
   padding: 0 15px; }
   .kose-hero img {
     width: 100%; }
+  @media (max-width: 425px) {
+    .kose-hero {
+      margin-bottom: 15px; } }
 
 .diger {
   margin-bottom: 75px;

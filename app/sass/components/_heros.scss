@@ -5,4 +5,7 @@
     img{
         width: 100%;
     }
+    @include breakpoint(smalls) {
+        margin-bottom: 15px;
+    }
 }
